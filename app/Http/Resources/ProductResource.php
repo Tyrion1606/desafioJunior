@@ -29,6 +29,7 @@ class ProductResource extends JsonResource
                     'name' => $category->name,
                 ];
             }),
+
         ];
     }
 }

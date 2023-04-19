@@ -18,8 +18,11 @@ class Product extends Model
         'special_price_from',
         'special_price_to',
         'is_active',
-        "categories",
+        'categories',
 
+    ];
+    protected $dates = [
+        'deleted_at',
     ];
 
     public function categories()
@@ -27,4 +30,3 @@ class Product extends Model
         return $this->belongsToMany(Category::class, 'category_products');
     }
 }
-

@@ -53,7 +53,7 @@ class ProductsController extends Controller
         // Validate the data received in the request, checking if the slug is unique except for the product itself
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'slug' => 'required|unique:products|max:255',
+            'slug' => 'required|unique:products,slug,' . $product->id . '|max:255',
             'price' => 'required|numeric|min:0',
             'special_price' => 'nullable',
             'special_price_from' => 'nullable',
