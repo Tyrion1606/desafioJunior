@@ -21,9 +21,6 @@ class Product extends Model
         'categories',
 
     ];
-    protected $dates = [
-        'deleted_at',
-    ];
 
     public function categories()
     {
